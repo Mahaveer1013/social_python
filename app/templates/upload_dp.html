@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Networking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/upload_dp.css">
+</head>
+<body background="static/img/Login.jpg">
+    <div class="container">
+        <div class="head">
+            <h2>Upload Profile Picture</h2>
+        </div>
+        <form method="post" action="upload_dp.php" enctype="multipart/form-data">
+            <div class="prof">
+                <h3>Upload New Profile Picture</h3>
+                <br><br><input type="file" name="dp" id="dp" class="dp" required>
+            </div>
+            <button type="submit" name="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>

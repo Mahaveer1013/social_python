@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/feedback.css">
+        
+</head>
+<body background="static/img/Login.jpg">
+	<div class="container">
+        <div class="head">
+		    <h2>Feedback Form</h2>
+        </div>
+		<form method="post" action="/user_feedback" autocomplete="off">
+            <div class="feedback">
+                <label><b>Feedback: </b></label><br>
+                <center>
+					<textarea name="feedback" placeholder="Feel Free To Express Your View" id="feedback" required></textarea>
+				</center>
+            </div>
+            
+		<button type="submit">Send Feedback</button>
+        </form>
+    </div>
+</body>
+</html>

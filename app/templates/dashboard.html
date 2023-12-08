@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="static/css/dashboard.css">
+    </head>
+    <body background="static/img/Login.jpg">
+        <center>
+        <div class="container">
+            <h1>Social Network </h1>
+            <div>
+            <form class="example" action="/search_user">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <p>Dont Forget To -><a href="#" onclick="window=window.open('feedback.html','MyWindow',width=400,height=100); return false;">Give Feedback</a></p>
+            <br><p style="float: right;">Personal Chat -><a href="#" onclick="window=window.open('/direct_message','MyWindow',width=400,height=100); return false;">Direct Messages</a></p>
+                <div class="profile">
+                    <h3>Profile</h3>
+                    <img  width='auto' height='100px' src='{{ url_for("static", filename="img/dp/" + dp_name) }}' alt='img'>
+                    <br><a href="">Upload Profile Picture</a>
+                    <table>
+                        <tr><th>Name : </th>
+                            <td>  {{name}}  </td>
+                        </tr>
+                        <tr>
+                            <th>Username : </th>
+                            <td>  {{username}}  </td>
+                        </tr>
+                        <tr>
+                            <th>Email id : </th>
+                            <td>  {{email}}  </td>
+                        </tr>                    
+                    </table>
+                </div>
+                <div class="post">
+                    <h2> Add Post Here </h2>
+                    <div class="post1">
+                        <form action="/add_post" method="post" enctype="multipart/form-data">
+                        <input type="textarea" name="post" id="post"><br>
+                        <input type="file" name="img" id="img"><br><br>
+                        <input type="submit" name="submit" class="submit" value="POST">
+                    </form>
+                    </div>
+                </div>
+                <div class="myposts">
+                <h2>My Posts</h2>
+
+
+
+
+                </div>
+            </div>
+        <a style="text-decoration: none;" href="index.php">Logout</a>
+        </div>
+        </center>
+    </body>
+</html>
